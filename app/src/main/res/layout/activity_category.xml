@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".category"
+    android:orientation="vertical"
+    android:background="@color/verdeClaro"
+    >
+
+    <ImageButton
+        android:id="@+id/btnBackCategory"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/verdeClaro"
+        android:src="@drawable/izquierda"
+        android:contentDescription="volver"
+        android:text="volver" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            app:srcCompat="@drawable/sierra_icon" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="45dp"
+            android:textSize="25dp"
+            android:textColor="@color/verdeOscuro"
+            />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/verdeOscuro"
+        android:text="@string/btnAgregar"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/st_container2"
+        android:padding="15dp"
+        >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+
+
+</LinearLayout>

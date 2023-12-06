@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nav"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@color/verdeOscuro"
+    >
+
+    <ImageButton
+        android:id="@+id/btnBackCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="backIni"
+        android:backgroundTint="@color/verdeOscuro"
+        android:src="@drawable/menu_light" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/verdeClaro"
+        android:text="@string/btnEditProfile"
+        android:textColor="@color/verdeOscuro" />
+
+    <Button
+        android:id="@+id/btnDeleteCategory"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="@color/verdeClaro"
+        android:text="@string/btnDeleteCategory"
+        android:textColor="@color/verdeOscuro" />
+
+    <ImageButton
+        android:id="@+id/btnConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/verdeOscuro"
+        android:contentDescription="options"
+        android:src="@drawable/config" />
+
+</LinearLayout>

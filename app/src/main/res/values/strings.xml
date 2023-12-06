@@ -17,5 +17,40 @@
     <string name="etIngresoNombre">Nombre de usuario</string>
     <string name="etIngresoContrasena">Contraseña</string>
     <string name="BtnInicioSesion">Iniciar sesión</string>
+    <string name="title_activity_menu2">menu2</string>
 
+    <!--Activity Menu principal-->
+    <string name="tvNameUser">nombre usario</string>
+    <string name="btnAddCategory">Agregar Categoria</string>
+    <!--Activity Configuracion-->
+    <string name="tvTituloConfiguracion">Configuracion</string>
+    <string name="btnEliminarCategoria">Eliminar categoria</string>
+    <string name="btnBorrarDatos">Borrar datos</string>
+    <string name="btnCrearNuevaCategoria">Crear nueva categoria</string>
+    <string name="btnCerrarSesion">Cerra sesion</string>
+
+    <!--Activity Crear nueva categoria -->
+    <string name="tvCrearNuevaCategoria">Crear nueva categoria</string>
+    <string name="tvIngreseNombreCategoria">Ingrese nombre de la categoria: </string>
+    <string name="etNombreCategoria">nombre de la categoria</string>
+    <string name="tvIntroduzcaNombreHerramientaMaterial">Introduzca el nombre de la herramienta o material: </string>
+    <string name="etiNombreHerramientaMaterial">nombre</string>
+    <string name="tvIconoCategoria">Elija el icono de la categoria</string>
+    <string name="btnCrear">Crear</string>
+    <!--Page Editar perfil-->
+    <string name="tvEditarPerfil">EditarPerfil</string>
+    <string name="btnCambiarFotoPerfil">Cambiar foto de perfil</string>
+    <string name="tvCambiarNombreUsuario">nombre de usuario</string>
+    <string name="etCambiarNombreUsuario">Ingresa el nuevo nombre de usuario</string>
+    <string name="tvCambiarContraseña">Ingresa la nueva contraseña</string>
+    <string name="etCambiarContraseña">Nueva contraseña</string>
+    <string name="tvConfirmarContraseña">Confirmar la nueva contraseña</string>
+    <string name="etConfirmarContraseña">Confirmar la nueva contraseña</string>
+    <string name="btnAplicarCambios">Aplicar cambios</string>
+    <!--activity nav-->
+    <string name="btnEditProfile">editar cuenta</string>
+    <string name="btnEditCategory">editar Categoria</string>
+    <string name="btnDeleteCategory">eliminar categoria</string>
+    <!-- activity category-->
+    <string name="btnAgregar">agregar</string>
 </resources>

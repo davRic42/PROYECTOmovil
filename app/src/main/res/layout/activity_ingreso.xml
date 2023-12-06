@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/azulClaro">
 
     <TextView
         android:id="@+id/tvIngresoTitulo"
@@ -15,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"/>
+        android:textColor="@color/black"/>
 
     <ImageView
         android:id="@+id/imgLogoIngreso"
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:text="@string/tvInicioSecion"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,4 +114,12 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/white"
         android:backgroundTint="@color/azulgrisaseo"/>
+
+    <TextView
+        android:id="@+id/tvPrueba"
+        android:layout_width="363dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
