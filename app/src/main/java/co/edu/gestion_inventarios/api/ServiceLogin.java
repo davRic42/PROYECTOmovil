@@ -15,5 +15,5 @@ public interface ServiceLogin {
     @POST("login")
     Call<ResponseCredentials> accessLogin(@Body Loger login);
     @POST("users")
-    Call<ResponseCredentials> createUser(@Body Loger users);
+    Call<ResponseCredentials> createUser(@Body Loger createUser);
 }

@@ -39,7 +39,6 @@ public class IngresoCuenta extends AppCompatActivity {
     private EditText etIngresoUsuario;
     private EditText etIngresoContrasena;
     private Button btnIniciarSesion;
-    private TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +59,6 @@ public class IngresoCuenta extends AppCompatActivity {
 
             retrofit = ClienteRetrofit.getCliente(BASE_URL);
             ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
-            this.tv.setText(loger.getUser_mail()+" "+loger.getUser_pss());
             Call<ResponseCredentials> call = serviceLogin.accessLogin(loger);
             call.enqueue(new Callback<ResponseCredentials>() {
                 @Override
@@ -163,6 +161,5 @@ public class IngresoCuenta extends AppCompatActivity {
         this.etIngresoUsuario= findViewById(R.id.etIngresoUsuario);
         this.etIngresoContrasena = findViewById(R.id.etIngresoContrasena);
         this.btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
-        this.tv  = findViewById(R.id.tvPrueba);
     }
 }

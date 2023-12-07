@@ -5,6 +5,7 @@ import static co.edu.gestion_inventarios.api.ValuesApi.BASE_URL;
 import androidx.appcompat.app.AlertDialog;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +32,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class RegistroCuenta extends AppCompatActivity {
     private Button btnRegistrarUsuario;
     private EditText etRegistroCorreo;
-    private EditText etRegistroContraseña;
+    private EditText etRegistroContrasena;
     private Retrofit retrofit;
 
     @Override
@@ -41,13 +42,13 @@ public class RegistroCuenta extends AppCompatActivity {
         begin();
         this.btnRegistrarUsuario.setOnClickListener(this::processRegistration);
     }
-    private void goTo(View view) {
+    private void goTo() {
         Intent intent = new Intent(this, menu.class);
         startActivity(intent);
     }
     private void processRegistration(View view) {
         String email = etRegistroCorreo.getText().toString();
-        String password = etRegistroContraseña.getText().toString();
+        String password = etRegistroContrasena.getText().toString();
 
         if (!validEmail(email) || password.length() <= 3) {
             alertView("Error en credenciales");
@@ -57,13 +58,17 @@ public class RegistroCuenta extends AppCompatActivity {
             loger.setUser_pss(md5(password));
             retrofit = ClienteRetrofit.getCliente(BASE_URL);
             ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
-
             Call<ResponseCredentials> call = serviceLogin.createUser(loger);
+            Log.i("response user", loger.getUser_mail().toString());
+            Log.i("response pss", loger.getUser_pss().toString());
+            Log.i("call", call.toString());
             call.enqueue(new Callback<ResponseCredentials>() {
                 @Override
                 public void onResponse(Call<ResponseCredentials> call, Response<ResponseCredentials> response) {
+                    alertView("en el response"+response.toString());
                     if (response.isSuccessful()) {
                         Toast.makeText(RegistroCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                        goTo();
                     } else {
                         alertView("Registration failed. Response Code: " + response.code());
                     }
@@ -71,7 +76,7 @@ public class RegistroCuenta extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<ResponseCredentials> call, Throwable t) {
-                    // Handle failure (e.g., network error)
+                    alertView("response" + t);
                     alertView("Error in registration. Please try again.");
                 }
             });
@@ -120,7 +125,7 @@ public class RegistroCuenta extends AppCompatActivity {
     }
     private void begin(){
         this.etRegistroCorreo = findViewById(R.id.etRegistroCorreo);
-        this.etRegistroContraseña = findViewById(R.id.etRegistroContraseña);
+        this.etRegistroContrasena = findViewById(R.id.etRegistroContrasena);
         this.btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario);
     }
 }

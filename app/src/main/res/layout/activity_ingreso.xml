@@ -115,11 +115,4 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/azulgrisaseo"/>
 
-    <TextView
-        android:id="@+id/tvPrueba"
-        android:layout_width="363dp"
-        android:layout_height="77dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
