@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutCreate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verde"
+    android:orientation="vertical"
+    tools:context=".activity_CrearCategoria">
+
+    <ImageButton
+        android:id="@+id/btnBackCreate"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/verde"
+        android:contentDescription="item"
+        android:src="@drawable/izquierda" />
+
+    <TextView
+        android:id="@+id/tvCrearNuevaCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/tvCrearNuevaCategoria"
+        android:textColor="@color/verdeOscuro"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/st_container2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvIngreseNombreCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/tvIngreseNombreCategoria"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNombreCategoria"
+            style="s"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/style_edit_text"
+            android:ems="10"
+            android:hint="@string/etNombreCategoria"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvIntroduzcaNombreMaterialHerramienta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/tvIntroduzcaNombreHerramientaMaterial"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNombreHerramientaCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/style_edit_text"
+            android:ems="10"
+            android:hint="@string/etiNombreHerramientaMaterial"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvEligeIconoCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/tvIconoCategoria"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+            <TableRow>
+
+                <ImageButton
+                    android:id="@+id/btnCaja"
+                    android:layout_width="46dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verdeOscuro"
+                    android:contentDescription="item"
+                    android:src="@drawable/blood_light" />
+
+                <ImageButton
+                    android:id="@+id/btnLlave"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verdeOscuro"
+                    android:contentDescription="item"
+                    android:src="@drawable/llave_light" />
+
+                <ImageButton
+                    android:id="@+id/btnCarton"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verdeOscuro"
+                    android:contentDescription="item"
+                    android:src="@drawable/caja_light" />
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/btnMesita"
+                    android:layout_width="46dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verdeOscuro"
+                    android:contentDescription="item"
+                    android:src="@drawable/mesita_light" />
+
+                <ImageButton
+                    android:id="@+id/btnTren"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verdeOscuro"
+                    android:contentDescription="item"
+                    android:src="@drawable/juguete_light" />
+
+                <ImageButton
+                    android:id="@+id/btnCorte"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verdeOscuro"
+                    android:contentDescription="item"
+                    android:src="@drawable/corte_light" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="154dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/verde"
+            android:text="@string/btnCrear"
+            android:textColor="@color/verdeDarkest"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
