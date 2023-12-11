@@ -2,6 +2,7 @@
     <string name="app_name">Gestion_inventarios</string>
     <string name="btnIngresar">Ingresar</string>
     <string name="btnRegistrar">Registrar</string>
+    <!--Registro-->
     <string name="tvRegitro">Registro de usuario</string>
     <string name="tvRegistroNombre">Ingrese su nombre de usuario:</string>
     <string name="tvRegistroCorreo">Ingrese su correo electrónico:</string>
@@ -10,6 +11,7 @@
     <string name="etRegistroCorreo">Correo</string>
     <string name="etRegistrarContrasena">Contraseña</string>
     <string name="etRegistrarNombre">Nombre</string>
+    <!--Ingreso-->
     <string name="tvIngresarTitulo">Bienvenido</string>
     <string name="tvInicioSecion">Inicio de sesión</string>
     <string name="tvIngresoUsuario">Ingrese su nombre de usuario:</string>

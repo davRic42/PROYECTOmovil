@@ -33,6 +33,8 @@ public class RegistroCuenta extends AppCompatActivity {
     private Button btnRegistrarUsuario;
     private EditText etRegistroCorreo;
     private EditText etRegistroContrasena;
+    private EditText etRegistroNombre;
+    private EditText etRegistroConfirmar;
     private Retrofit retrofit;
 
     @Override
@@ -49,35 +51,40 @@ public class RegistroCuenta extends AppCompatActivity {
     private void processRegistration(View view) {
         String email = etRegistroCorreo.getText().toString();
         String password = etRegistroContrasena.getText().toString();
+        String name = etRegistroNombre.getText().toString();
 
-        if (!validEmail(email) || password.length() <= 3) {
-            alertView("Error en credenciales");
+        if (!validEmail(email) || password.length() <= 3 || validName() != true) {
+            alertView("Los datos no son validos, intente de nuevo");
         } else {
             Loger loger = new Loger();
             loger.setUser_mail(email);
             loger.setUser_pss(md5(password));
+            loger.setUser_name(name);
             retrofit = ClienteRetrofit.getCliente(BASE_URL);
             ServiceLogin serviceLogin = retrofit.create(ServiceLogin.class);
+
             Call<ResponseCredentials> call = serviceLogin.createUser(loger);
-            Log.i("response user", loger.getUser_mail().toString());
-            Log.i("response pss", loger.getUser_pss().toString());
-            Log.i("call", call.toString());
             call.enqueue(new Callback<ResponseCredentials>() {
                 @Override
                 public void onResponse(Call<ResponseCredentials> call, Response<ResponseCredentials> response) {
-                    alertView("en el response"+response.toString());
+                    Log.i("resultado", response.toString());
                     if (response.isSuccessful()) {
-                        Toast.makeText(RegistroCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-                        goTo();
+                        ResponseCredentials body = response.body();
+                        Log.i("body", body.toString());
+                        if (validPassword()){
+                            Toast.makeText(RegistroCuenta.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                            goTo();
+                        }else{
+                            Toast.makeText(RegistroCuenta.this, "Algo fallo, intente de nuevo", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
-                        alertView("Registration failed. Response Code: " + response.code());
+                        alertView("Algo fallo en el proceso :(");
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ResponseCredentials> call, Throwable t) {
-                    alertView("response" + t);
-                    alertView("Error in registration. Please try again.");
+                    alertView("Error en el registro. Por favor intenta de nuevo.");
                 }
             });
         }
@@ -90,9 +97,34 @@ public class RegistroCuenta extends AppCompatActivity {
             System.out.println("El email ingresado es válido.");
             return true;
         } else {
-            System.out.println("El email ingresado es inválido.");
+            System.out.println("El email ingresado no es válido.");
         }
         return false;
+    }
+    public boolean validName(){
+        boolean estado;
+        if (etRegistroNombre.getText().toString().matches("^[A-Za-z1-9]{2,10}$")){
+            estado = true;
+        }else{
+            estado = false;
+        }
+        return estado;
+    }
+    public boolean validPassword(){
+        boolean estado;
+        String pass;
+        String confirm;
+        pass = etRegistroContrasena.getText().toString();
+        confirm = etRegistroConfirmar.getText().toString();
+        Log.i("pass", pass);
+        Log.i("confirm", confirm);
+        if(pass.matches(confirm)){
+            estado = true;
+        }else{
+            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+            estado = false;
+        }
+        return estado;
     }
     public static String md5(final String s) {
         final String MD5 = "MD5";
@@ -124,8 +156,10 @@ public class RegistroCuenta extends AppCompatActivity {
         builder.show();
     }
     private void begin(){
+        this.etRegistroNombre = findViewById(R.id.etRegistroNombre);
         this.etRegistroCorreo = findViewById(R.id.etRegistroCorreo);
         this.etRegistroContrasena = findViewById(R.id.etRegistroContrasena);
+        this.etRegistroConfirmar = findViewById(R.id.etRegistroConfirmar);
         this.btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario);
     }
 }
