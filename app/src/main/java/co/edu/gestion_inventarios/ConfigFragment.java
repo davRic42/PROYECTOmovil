@@ -46,6 +46,12 @@ public class ConfigFragment extends Fragment implements View.OnClickListener {
 
         btnCrearNuevaCuenta = view.findViewById(R.id.btnCrearNuevaCuenta);
         btnCrearNuevaCuenta.setOnClickListener(this);
+
+        btnBorraDatos = view.findViewById(R.id.btnBorraDatos);
+        btnBorraDatos.setOnClickListener(this);
+
+        btnEliminarCategoria = view.findViewById(R.id.btnEliminarCategoria);
+        btnEliminarCategoria.setOnClickListener(this);
         // Otros botones aquí...
 
         return view;
@@ -62,6 +68,12 @@ public class ConfigFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         } else if (v.getId()==R.id.btnCrearNuevaCuenta) {
             Intent intent = new Intent(getActivity(), RegistroCuenta.class); // Ajusta el nombre de la actividad de destino
+            startActivity(intent);
+        }else if (v.getId()==R.id.btnBorraDatos) {
+            Intent intent = new Intent(getActivity(), deleteData.class); // Ajusta el nombre de la actividad de destino
+            startActivity(intent);
+        }else if (v.getId()==R.id.btnEliminarCategoria) {
+            Intent intent = new Intent(getActivity(), eliminarCategoria.class); // Ajusta el nombre de la actividad de destino
             startActivity(intent);
         }
     }
