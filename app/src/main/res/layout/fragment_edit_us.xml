@@ -86,7 +86,7 @@
             android:text="@string/tvCambiarContraseña" />
 
         <EditText
-            android:id="@+id/etContraseña"
+            android:id="@+id/etContrasena"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
@@ -109,7 +109,7 @@
             android:text="@string/tvConfirmarContraseña" />
 
         <EditText
-            android:id="@+id/etConfirmarContraseña"
+            android:id="@+id/etConfirmarContrasena"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"

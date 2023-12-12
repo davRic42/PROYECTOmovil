@@ -6,6 +6,7 @@ import android.widget.EditText;
 import co.edu.gestion_inventarios.model.Loger;
 import co.edu.gestion_inventarios.model.ResponseCredentials;
 import retrofit2.http.Body;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.Call;
 
@@ -16,4 +17,6 @@ public interface ServiceLogin {
     Call<ResponseCredentials> accessLogin(@Body Loger login);
     @POST("users")
     Call<ResponseCredentials> createUser(@Body Loger createUser);
+    @PATCH("users")
+    Call<ResponseCredentials> updateUser(@Body Loger updateUser);
 }
