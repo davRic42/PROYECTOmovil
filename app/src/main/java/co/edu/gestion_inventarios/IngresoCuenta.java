@@ -73,6 +73,7 @@ public class IngresoCuenta extends AppCompatActivity {
                             for(Credentials c:list){
                                 SharedPreferences shared = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor = shared.edit();
+                                editor.putString("correo", etIngresoUsuario.getText().toString());
                                 editor.putString("key", c.getUser_key());
                                 editor.putString("identificator", c.getUser_identifier());
                                 editor.putString("id", c.getUser_id());
@@ -87,7 +88,6 @@ public class IngresoCuenta extends AppCompatActivity {
                     }else{
                         alertView("Usuario no existe, intente de nuevo, Respuesta: " + response.code());
                     }
-
                 }
 
                 @Override
