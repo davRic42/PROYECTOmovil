@@ -23,10 +23,8 @@
             android:theme="@style/Theme.Gestion_inventarios" />
         <activity
             android:name=".category"
-            android:exported="false" />
-        <activity
-            android:name=".configuracion"
-            android:exported="false" />
+            android:exported="false"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

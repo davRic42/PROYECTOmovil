@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:background="@color/verdeClaro"
+       >
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="230dp"
+           android:background="@drawable/st_cotainers1">
+
+           <ImageView
+               android:id="@+id/ivProfileUser"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="65dp"
+               android:layout_marginTop="45dp"
+               android:src="@drawable/user_photo" />
+
+           <TextView
+               android:id="@+id/tvNameUser"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="230dp"
+               android:layout_marginTop="95dp"
+               android:text="@string/tvNameUser"
+               android:textSize="20dp"
+               android:textStyle="bold" />
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/containerCategory"
+           android:layout_width="358dp"
+           android:layout_height="441dp"
+           android:layout_marginHorizontal="20dp"
+           android:layout_marginTop="40dp"
+           android:background="@drawable/st_container2">
+
+           <Button
+               android:id="@+id/btnAddCategory"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:layout_marginTop="15dp"
+               android:backgroundTint="@color/verdeClaro"
+               android:text="@string/btnAddCategory"
+               android:textColor="@color/verdeOscuro"
+               android:textStyle="bold" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rvMenu"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginHorizontal="15dp"
+               android:layout_marginTop="80dp" />
+
+
+       </RelativeLayout>
+
+   </LinearLayout>
+
+</FrameLayout>

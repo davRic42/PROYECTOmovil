@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/verde"
+        android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/ibtnAtrasPerfil"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/verde"
+        android:contentDescription="back"
+        android:src="@drawable/izquierda" />
+
+    <TextView
+        android:id="@+id/tvEditarPeril"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="24dp"
+        android:textColor="@color/verdeOscuro"
+        android:textStyle="bold"
+        android:text="@string/tvEditarPerfil" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/st_container2"
+        android:orientation="vertical">
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="24dp">
+            <ImageView
+                android:id="@+id/imPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:src="@drawable/user_photo" />
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tvCambiarNombrePerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="@string/tvCambiarNombreUsuario" />
+
+        <EditText
+            android:id="@+id/etNombreusuario"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/style_edit_text"
+            android:ems="10"
+            android:hint="@string/etCambiarNombreUsuario"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvCambiarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="@string/tvCambiarContraseña" />
+
+        <EditText
+            android:id="@+id/etContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/style_edit_text"
+            android:ems="10"
+            android:hint="@string/etCambiarContraseña"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tvConfirmarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="@string/tvConfirmarContraseña" />
+
+        <EditText
+            android:id="@+id/etConfirmarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:ems="10"
+            android:background="@drawable/style_edit_text"
+            android:hint="@string/etConfirmarContraseña"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnAplicarCambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:backgroundTint="@color/verde"
+
+            android:text="@string/btnAplicarCambios"
+            android:textColor="@color/verdeDarkest" />
+    </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

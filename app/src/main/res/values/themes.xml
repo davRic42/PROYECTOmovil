@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Gestion_inventarios" parent="Base.Theme.Gestion_inventarios" />
+    
+    //nav bar
+    <style name="BottomNavigation">
+        <item name="android:background">@color/verdeDarkest</item>
+        <item name="itemIconTint">@color/verdeClaro</item>
+        <item name="itemTextColor">@color/verdeClaro</item>
+
+    </style>
 </resources>

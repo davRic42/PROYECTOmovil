@@ -1,73 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".menu"
     android:orientation="vertical"
-    android:background="@color/verdeClaro"
-    >
+    android:background="@color/verdeClaro">
 
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/frameContent"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/st_cotainers1">
-
-        <ImageButton
-            android:id="@+id/btnMenu"
-            android:layout_width="79dp"
-            android:layout_height="83dp"
-            android:backgroundTint="@color/verdeOscuro"
-            android:contentDescription="menu"
-            android:src="@drawable/menu_light" />
-
-        <ImageView
-            android:id="@+id/ivProfileUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="120dp"
-            android:src="@drawable/user_photo" />
-
-        <TextView
-            android:id="@+id/tvNameUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="175dp"
-            android:text="@string/tvNameUser"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/containerCategory"
-        android:layout_width="358dp"
-        android:layout_height="382dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/st_container2">
-
-        <Button
-            android:id="@+id/btnAddCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/verdeClaro"
-            android:text="@string/btnAddCategory"
-            android:textColor="@color/verdeOscuro"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMenu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="80dp" />
-
-
-    </RelativeLayout>
-
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        app:menu="@menu/bottom_navigation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        app:labelVisibilityMode="selected"
+        style="@style/BottomNavigation"/>
+</RelativeLayout>

@@ -11,8 +11,6 @@ import android.widget.ImageButton;
 public class nav extends AppCompatActivity {
     private ImageButton btnBackMenu;
     private Button btnDeleteCategory;
-    private Button btnEditProfile;
-    private ImageButton btnConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +18,8 @@ public class nav extends AppCompatActivity {
         setContentView(R.layout.activity_nav);
         begin();
         this.btnBackMenu.setOnClickListener(this::backMenu);
-        this.btnConfig.setOnClickListener(this::irConfig);
+
         this.btnDeleteCategory.setOnClickListener(this::irDeleteC);
-        this.btnEditProfile.setOnClickListener(this::irEditP);
 
     }
 
@@ -36,10 +33,7 @@ public class nav extends AppCompatActivity {
     }
 
 
-    private void irConfig(View view) {
-        Intent irCategory= new Intent(getApplicationContext(),configuracion.class);
-        startActivity(irCategory);
-    }
+
 
     private void backMenu(View view) {
         Intent irCategory= new Intent(getApplicationContext(),menu.class);
@@ -48,8 +42,6 @@ public class nav extends AppCompatActivity {
 
     private void begin(){
         this.btnBackMenu=findViewById(R.id.btnBackCreate);
-        this.btnEditProfile=findViewById(R.id.btnEditProfile);
-        this.btnConfig=findViewById(R.id.btnConfig);
         this.btnDeleteCategory=findViewById(R.id.btnDeleteCategory);
     }
 }
