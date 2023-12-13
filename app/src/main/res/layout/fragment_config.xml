@@ -29,7 +29,7 @@
             android:layout_marginTop="12dp"
             android:textSize="24dp"
             android:textStyle="bold"
-            android:textColor="@color/verdeOscuro"
+            android:textColor="@color/verdeDarkest"
             android:text="@string/tvTituloConfiguracion" />
 
         <TableLayout
@@ -48,7 +48,7 @@
                 android:layout_marginTop="124dp"
                 android:layout_marginRight="164dp"
                 android:backgroundTint="@color/verde"
-                android:textColor="@color/verdeOscuro"
+                android:textColor="@color/verdeDarkest"
                 android:text="@string/btnEliminarCategoria" />
 
             <Button
@@ -59,7 +59,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="164dp"
                 android:backgroundTint="@color/verde"
-                android:textColor="@color/verdeOscuro"
+                android:textColor="@color/verdeDarkest"
                 android:text="@string/btnBorrarDatos" />
 
             <Button
@@ -70,8 +70,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="164dp"
                 android:backgroundTint="@color/verde"
-                android:textColor="@color/verdeOscuro"
-                android:text="@string/btnCrearNuevaCategoria" />
+                android:textColor="@color/verdeDarkest"
+                android:text="@string/btnCrearNuevaCuenta" />
 
             <Button
                 android:id="@+id/btnCerrarSesion"
@@ -81,7 +81,7 @@
                 android:layout_marginTop="200dp"
                 android:layout_marginRight="164dp"
                 android:backgroundTint="@color/verde"
-                android:textColor="@color/verdeOscuro"
+                android:textColor="@color/verdeDarkest"
                 android:text="@string/btnCerrarSesion" />
         </TableLayout>
     </LinearLayout>

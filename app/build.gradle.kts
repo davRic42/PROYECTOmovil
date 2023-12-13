@@ -77,7 +77,9 @@ dependencies {
     //recicler
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation ("androidx.recyclerview:recyclerview:1.1.0")
 
-
+//Barra
+    implementation ("com.facebook.shimmer:shimmer:0.5.0")
 
 }

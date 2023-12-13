@@ -28,7 +28,7 @@
     <string name="tvTituloConfiguracion">Configuracion</string>
     <string name="btnEliminarCategoria">Eliminar categoria</string>
     <string name="btnBorrarDatos">Borrar datos</string>
-    <string name="btnCrearNuevaCategoria">Crear nueva categoria</string>
+    <string name="btnCrearNuevaCuenta">Crear nueva cuenta</string>
     <string name="btnCerrarSesion">Cerra sesion</string>
 
     <!--Activity Crear nueva categoria -->
@@ -51,7 +51,6 @@
     <string name="btnAplicarCambios">Aplicar cambios</string>
     <!--activity nav-->
     <string name="btnEditProfile">editar cuenta</string>
-    <string name="btnEditCategory">editar Categoria</string>
     <string name="btnDeleteCategory">eliminar categoria</string>
     <!-- activity category-->
     <string name="btnAgregar">agregar</string>
