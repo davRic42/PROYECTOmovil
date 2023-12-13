@@ -20,6 +20,7 @@
     <string name="etIngresoContrasena">Contraseña</string>
     <string name="BtnInicioSesion">Iniciar sesión</string>
     <string name="title_activity_menu2">menu2</string>
+    <string name="btnBiometric">Huella</string>
 
     <!--Activity Menu principal-->
     <string name="tvNameUser">nombre usario</string>
