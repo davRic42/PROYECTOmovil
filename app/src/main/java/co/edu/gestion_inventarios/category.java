@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class category extends AppCompatActivity {
 
@@ -18,9 +19,6 @@ public class category extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         begin();
-        list_element element=(list_element) getIntent().getSerializableExtra("listItem");
-        this.tvCategory.setText(element.getNameCard());
-
         this.btnBackCategory.setOnClickListener(this::irMenu);
     }
 

@@ -24,14 +24,26 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     private List<Categoria> categoryList;
     private Context context;
 
+    private View.OnClickListener listener;
+
     public CategoryAdapter(List<Categoria> categoryList, Context context) {
         this.categoryList = categoryList;
         this.context = context;
     }
-
+    public void setOnclickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
     @Override
     public void onClick(View v) {
+        if (listener != null){
+            listener.onClick(v);
+        }else{
+            Toast.makeText(v.getContext(), "???", Toast.LENGTH_SHORT).show();
+        }
+    }
 
+    public void setOnClickListener(View.OnClickListener onClickListener){
+        this.listener = onClickListener;
     }
 
     @NonNull
@@ -39,6 +51,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public CategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view=LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_element,parent,false);
+        view.setOnClickListener(this);
         return new ViewHolder(view);
     }
 
@@ -46,6 +59,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         holder.numberCategory.setText(categoryList.get(position).getId_category());
         holder.nameCategory.setText(categoryList.get(position).getName_category());
+
     }
 
     @Override

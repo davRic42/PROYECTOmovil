@@ -48,6 +48,7 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
     private CategoryAdapter categoryAdapter;
     private Retrofit retrofit;
 
+
     public MenuFragment() {
         // Required empty public constructor
     }
@@ -87,6 +88,8 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         }
     }
+
+
     private void checkName() {
         Context context = getContext();
         SharedPreferences loginPreferences = context.getSharedPreferences("Login", Context.MODE_PRIVATE);
@@ -136,9 +139,17 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                     if (productList != null) {
                         elements=response.body();
                         categoryAdapter=new CategoryAdapter(elements,getContext().getApplicationContext());
+                        categoryAdapter.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                //Toast.makeText(v.getContext(), "funciona el click", Toast.LENGTH_SHORT).show();
+                                Intent intent= new Intent(getActivity(),category.class);
+                                startActivity(intent);
+                            }
+                        });
                         rvMenu.setAdapter(categoryAdapter);
                         Toast.makeText(getContext(), "La lista de categorías no es nula", Toast.LENGTH_LONG).show();
-                        // No es necesario crear un nuevo CategoryAdapter aquí
+
                     } else {
                         Toast.makeText(getContext(), "La lista de categorías es nula", Toast.LENGTH_LONG).show();
                     }
