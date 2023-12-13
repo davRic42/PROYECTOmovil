@@ -20,11 +20,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> implements View.OnClickListener{
-    private List<Categoria> categoryList;
-    private View.OnClickListener listener;
 
-    public CategoryAdapter(ArrayList<Categoria> itemList){
-        this.categoryList=itemList;
+    private List<Categoria> categoryList;
+    private Context context;
+
+    public CategoryAdapter(List<Categoria> categoryList, Context context) {
+        this.categoryList = categoryList;
+        this.context = context;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @NonNull
+    @Override
+    public CategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view=LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_element,parent,false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
+        holder.numberCategory.setText(categoryList.get(position).getId_category());
+        holder.nameCategory.setText(categoryList.get(position).getName_category());
     }
 
     @Override
@@ -32,60 +53,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         return categoryList.size();
     }
 
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_element, parent, false);
-        view.setOnClickListener(this);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Categoria categoria = categoryList.get(position);
-
-        // Configura los datos en las vistas del CardView
-        // Aquí puedes cargar la imagen si tu modelo de datos tiene información de imagen.
-        // Puedes usar bibliotecas como Picasso o Glide para cargar imágenes desde URL o recursos.
-        // Picasso.get().load(categoria.getImagenUrl()).into(holder.categoryPhoto);
-
-        holder.nameCategory.setText(categoria.getName_category());
-        holder.numberCategory.setText(String.valueOf(categoria.getId_category()));
-    }
-
-    @Override
-    public void onClick(View v) {
-        if (listener != null){
-            listener.onClick(v);
-        }else{
-            Toast.makeText(v.getContext(), "???", Toast.LENGTH_SHORT).show();
-        }
-    }
-    public void setOnClickListener(View.OnClickListener onClickListener){
-        this.listener = onClickListener;
-    }
-
-    public void setItems(List<Categoria> items){
-        categoryList=items;
-    }
-
-    public void setCategory(List<Categoria> categoryList){
-        this.categoryList= categoryList;
-        notifyDataSetChanged();
-    }
-
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView categoryPhoto;
+    public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView nameCategory;
         public TextView numberCategory;
-
-        public ViewHolder(View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            categoryPhoto = itemView.findViewById(R.id.ivCategoryPhoto);
             nameCategory = itemView.findViewById(R.id.tvNameCategory);
             numberCategory = itemView.findViewById(R.id.tvNumberCard);
         }
     }
-
 }

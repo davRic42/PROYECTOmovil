@@ -30,6 +30,7 @@ import co.edu.gestion_inventarios.model.Categoria;
 import co.edu.gestion_inventarios.model.Credentials;
 import co.edu.gestion_inventarios.model.Loger;
 import co.edu.gestion_inventarios.model.ResponseCredentials;
+import co.edu.gestion_inventarios.model.ResultsC;
 import co.edu.gestion_inventarios.remote.ClienteRetrofit;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -73,7 +74,6 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
 
         rvMenu = view.findViewById(R.id.rvMenu);
         rvMenu.setLayoutManager(new LinearLayoutManager(getContext()));
-        categoryAdapter = new CategoryAdapter(elements);
         getProductData();
 
         return view;
@@ -134,7 +134,9 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
 
                     // Verifica que la lista de categorías no sea nula antes de configurar el adaptador
                     if (productList != null) {
-                        categoryAdapter.setCategory(productList);
+                        elements=response.body();
+                        categoryAdapter=new CategoryAdapter(elements,getContext().getApplicationContext());
+                        rvMenu.setAdapter(categoryAdapter);
                         Toast.makeText(getContext(), "La lista de categorías no es nula", Toast.LENGTH_LONG).show();
                         // No es necesario crear un nuevo CategoryAdapter aquí
                     } else {
