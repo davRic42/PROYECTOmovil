@@ -115,4 +115,16 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/azulgrisaseo"/>
 
+    <Button
+        android:id="@+id/btnBiometric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="604dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/azulgrisaseo"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

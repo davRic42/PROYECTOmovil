@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"></uses-permission>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -41,7 +41,6 @@
         <activity android:name=".RegistroCuenta" />
         <activity android:name=".IngresoCuenta" />
         <activity android:name=".activity_CrearCategoria" />
-        <activity android:name=".activity_editarPerfil" />
     </application>
 
 </manifest>
