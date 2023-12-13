@@ -7,6 +7,7 @@ public class Loger implements Serializable {
     private String user_mail;
     private String user_name;
     private String user_id;
+
     public String getUser_id() {
         return user_id;
     }
@@ -14,6 +15,7 @@ public class Loger implements Serializable {
     public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
+
     public String getUser_name() {
         return user_name;
     }

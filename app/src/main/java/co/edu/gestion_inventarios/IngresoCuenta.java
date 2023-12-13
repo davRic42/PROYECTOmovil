@@ -78,6 +78,10 @@ public class IngresoCuenta extends AppCompatActivity {
                                 editor.putString("identificator", c.getUser_identifier());
                                 editor.putString("id", c.getUser_id());
                                 editor.commit();
+                                SharedPreferences loginPreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor loginEditor = loginPreferences.edit();
+                                loginEditor.putString("loginId", c.getUser_id());
+                                loginEditor.apply();
                                 goTo();
                             }
                         }else{
