@@ -39,6 +39,7 @@
     <string name="etiNombreHerramientaMaterial">nombre</string>
     <string name="tvIconoCategoria">Elija el icono de la categoria</string>
     <string name="btnCrear">Crear</string>
+    <string name="btnAdd">añadir</string>
     <!--Page Editar perfil-->
     <string name="tvEditarPerfil">EditarPerfil</string>
     <string name="btnCambiarFotoPerfil">Cambiar foto de perfil</string>

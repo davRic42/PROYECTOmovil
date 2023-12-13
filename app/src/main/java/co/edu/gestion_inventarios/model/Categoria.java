@@ -12,6 +12,10 @@ public class Categoria implements Serializable {
         this.id_category = id_category;
     }
 
+    public Categoria (){
+
+    }
+
     public String getName_category() {
         return name_category;
     }
